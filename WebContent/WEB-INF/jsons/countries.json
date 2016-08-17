@@ -1,0 +1,21 @@
+{
+  "sentences": [
+    "German people live in",
+    "France's south neighbour is",
+    "The biggest continent is",
+    "Australia is both country and",
+    "Russia's capital is",
+    "Paris is the capital of"
+  ],
+  "vocabulary": [
+    "Germany",
+    "Spain",
+    "Asia",
+    "continent",
+    "Moscow",
+    "France"
+  ],
+  "name": "Countries test",
+  "id": 4,
+  "uniqueId": 4
+}
