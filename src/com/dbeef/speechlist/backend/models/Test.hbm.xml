@@ -15,7 +15,7 @@
 
 		<property name="name" column="NAME" />
 
-		<property name="sentences" column="SENTENCES" />
+		<property name="sentences" length="2048" column="SENTENCES" />
 
 		<property name="vocabulary" column="VOCABULARY" />
 

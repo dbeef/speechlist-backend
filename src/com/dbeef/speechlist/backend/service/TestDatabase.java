@@ -8,23 +8,21 @@ import com.dbeef.speechlist.backend.models.*;
 
 public class TestDatabase {
 
+	HibernateConnector hibernateConnector = new HibernateConnector();
+	
 	public List<Test> getTests() {
-		HibernateConnector hibernateConnector = new HibernateConnector();
 		return hibernateConnector.getTests();
 	}
 
 	public List<Notification> getNotifications() {
-		HibernateConnector hibernateConnector = new HibernateConnector();
 		return hibernateConnector.getNotifications();
 	}
 
 	public Test getTest(int id) {
-		HibernateConnector hibernateConnector = new HibernateConnector();
 		return hibernateConnector.getTest(id);
 	}
 
 	public UniqueIdContainer getUniqueIds() {
-		HibernateConnector hibernateConnector = new HibernateConnector();
 		return hibernateConnector.getUniqueIds();
 	}
 }

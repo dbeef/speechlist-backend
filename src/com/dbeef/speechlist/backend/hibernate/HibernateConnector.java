@@ -17,6 +17,8 @@ import com.google.gson.Gson;
 
 public class HibernateConnector {
 
+	static final String ABSOLUTE_PATH_TO_PROJECT = "/var/lib/tomcat8/webapps/UserManagement";
+
 	public HibernateConnector() {
 
 		Session session = HibernateUtil.getHibernateSession();
@@ -31,7 +33,7 @@ public class HibernateConnector {
 
 		List<Test> tests = session.createQuery("from Test").list();
 		if (tests.size() == 0) {
-			File folder = new File("/var/lib/tomcat8/webapps/UserManagement/WEB-INF/jsons");
+			File folder = new File(ABSOLUTE_PATH_TO_PROJECT + "/WEB-INF/jsons");
 			File[] listOfFiles = folder.listFiles();
 
 			String json = null;
@@ -62,9 +64,7 @@ public class HibernateConnector {
 					// System.out.println("Directory " +
 					// listOfFiles[i].getName());
 				}
-
 			}
-
 			tx.commit();
 		}
 		session.close();
@@ -85,7 +85,6 @@ public class HibernateConnector {
 
 		List<Test> tests = session.createQuery("from Test").list();
 
-		tx.commit();
 		session.close();
 
 		return tests;
@@ -107,6 +106,7 @@ public class HibernateConnector {
 
 		for (Test a : tests) {
 			if (a.getUniqueId() == id)
+				session.close();
 				return a;
 		}
 		session.close();

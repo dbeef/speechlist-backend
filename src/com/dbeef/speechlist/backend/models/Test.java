@@ -1,5 +1,6 @@
 package com.dbeef.speechlist.backend.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -12,8 +13,10 @@ public class Test {
 	private int id;
 	private int uniqueId;
 	private String name;
+	private String category;
+
 	private String[] vocabulary;
-	private String[] sentences;
+	private String sentences;
 
 	public Test() {
 	}
@@ -54,12 +57,21 @@ public class Test {
 		this.vocabulary = vocabulary;
 	}
 
-	public String[] getSentences() {
+	public String getSentences() {
 		return sentences;
 	}
 
+	public String getCategory() {
+		return category;
+	}
+
 	@XmlElement
-	public void setSentences(String[] sentences) {
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	@XmlElement
+	public void setSentences(String sentences) {
 		this.sentences = sentences;
 	}
 }
