@@ -12,12 +12,13 @@ import org.hibernate.Transaction;
 
 import com.dbeef.speechlist.backend.models.Notification;
 import com.dbeef.speechlist.backend.models.Test;
+import com.dbeef.speechlist.backend.models.TestNamesContainer;
 import com.dbeef.speechlist.backend.models.UniqueIdContainer;
 import com.google.gson.Gson;
 
 public class HibernateConnector {
 
-	static final String ABSOLUTE_PATH_TO_PROJECT = "/var/lib/tomcat8/webapps/UserManagement";
+	static final String ABSOLUTE_PATH_TO_PROJECT = "/var/lib/tomcat7/webapps/UserManagement";
 
 	public HibernateConnector() {
 
@@ -85,12 +86,13 @@ public class HibernateConnector {
 
 		List<Test> tests = session.createQuery("from Test").list();
 
+		tx.commit();
 		session.close();
 
 		return tests;
 	}
 
-	public Test getTest(int id) {
+	public Test getTest(int uniqueId) {
 
 		Session session = HibernateUtil.getHibernateSession();
 		session.beginTransaction();
@@ -105,10 +107,14 @@ public class HibernateConnector {
 		List<Test> tests = session.createQuery("from Test").list();
 
 		for (Test a : tests) {
-			if (a.getUniqueId() == id)
+			if (a.getUniqueId() == uniqueId) {
+				tx.commit();
 				session.close();
 				return a;
+			}
 		}
+
+		tx.commit();
 		session.close();
 
 		return null;
@@ -162,6 +168,7 @@ public class HibernateConnector {
 			uniqueIds[a] = tests.get(a).getUniqueId();
 		}
 
+		tx.commit();
 		session.close();
 
 		UniqueIdContainer container = new UniqueIdContainer();
@@ -172,5 +179,44 @@ public class HibernateConnector {
 	static String readFile(String path, Charset encoding) throws IOException {
 		byte[] encoded = Files.readAllBytes(Paths.get(path));
 		return new String(encoded, encoding);
+	}
+
+	public TestNamesContainer getTestNames(UniqueIdContainer uniqueIdContainer) {
+
+		Session session = HibernateUtil.getHibernateSession();
+		session.beginTransaction();
+
+		Transaction tx = null;
+
+		tx = session.getTransaction();
+
+		if (tx.isActive() == false)
+			tx = session.beginTransaction();
+
+		List<Test> tests = session.createQuery("from Test").list();
+
+		String[] names = new String[uniqueIdContainer.getUniqueIds().length];
+		
+		for (int a = 0; a < tests.size(); a++) {
+			for (int b = 0; b < uniqueIdContainer.getUniqueIds().length; b++) {
+				if (tests.get(a).getUniqueId() == uniqueIdContainer.getUniqueIds()[b])
+					names[a] = tests.get(a).getName();
+			}
+		}
+
+		tx.commit();
+		session.close();
+
+		TestNamesContainer container = new TestNamesContainer();
+		container.setNames(names);
+
+		for (int a = 0; a < container.getNames().length; a++) {
+			if (container.getNames()[a] == null) {
+				container.getNames()[a] = "null";
+			}
+		}
+
+		return container;
+
 	}
 }

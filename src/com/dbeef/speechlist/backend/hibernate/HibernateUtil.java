@@ -1,3 +1,4 @@
+
 package com.dbeef.speechlist.backend.hibernate;
 
 import org.hibernate.Session;
