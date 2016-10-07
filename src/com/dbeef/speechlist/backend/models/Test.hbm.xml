@@ -19,6 +19,8 @@
 
 		<property name="vocabulary" column="VOCABULARY" />
 
+		<property name="category" column="CATEGORY" />
+
 	</class>
 
 </hibernate-mapping>

@@ -9,13 +9,13 @@ import org.hibernate.service.ServiceRegistry;
 
 public class HibernateUtil {
 
-	private static final SessionFactory sessionFactory = buildSessionFactory();
+	private static SessionFactory sessionFactory;
 
 	private static SessionFactory buildSessionFactory() {
 		try {
 			Configuration configuration = new Configuration();
 			configuration.configure();
-			
+
 			StandardServiceRegistryBuilder standardServiceRegistryBuilder = new StandardServiceRegistryBuilder();
 			standardServiceRegistryBuilder.applySettings(configuration.getProperties());
 			ServiceRegistry serviceRegistry = standardServiceRegistryBuilder.build();
@@ -32,10 +32,12 @@ public class HibernateUtil {
 
 	public static Session getHibernateSession() {
 
-		final SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
-		
+		if (sessionFactory == null) {
+			sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+		}
+
 		// factory = new Configuration().configure().buildSessionFactory();
-		final Session session = sf.openSession();
+		final Session session = sessionFactory.openSession();
 		return session;
 	}
 }
