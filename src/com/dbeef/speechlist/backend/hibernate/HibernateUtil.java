@@ -32,12 +32,10 @@ public class HibernateUtil {
 
 	public static Session getHibernateSession() {
 
-		if (sessionFactory == null) {
-			sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
-		}
+		final SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 
 		// factory = new Configuration().configure().buildSessionFactory();
-		final Session session = sessionFactory.openSession();
+		final Session session = sf.openSession();
 		return session;
 	}
 }

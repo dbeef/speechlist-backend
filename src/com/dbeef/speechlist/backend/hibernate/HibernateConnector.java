@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -22,7 +23,7 @@ public class HibernateConnector {
 
 	public HibernateConnector() {
 
-		Session session = HibernateUtil.getHibernateSession();
+		final Session session = HibernateUtil.getHibernateSession();
 		session.beginTransaction();
 
 		Transaction tx = null;
@@ -69,12 +70,11 @@ public class HibernateConnector {
 			tx.commit();
 		}
 		session.close();
-
 	}
 
 	public List<Test> getTests() {
 
-		Session session = HibernateUtil.getHibernateSession();
+		final Session session = HibernateUtil.getHibernateSession();
 		session.beginTransaction();
 
 		Transaction tx = null;
@@ -94,7 +94,7 @@ public class HibernateConnector {
 
 	public Test getTest(int uniqueId) {
 
-		Session session = HibernateUtil.getHibernateSession();
+		final Session session = HibernateUtil.getHibernateSession();
 		session.beginTransaction();
 
 		Transaction tx = null;
@@ -122,7 +122,7 @@ public class HibernateConnector {
 
 	public List<Notification> getNotifications() {
 
-		Session session = HibernateUtil.getHibernateSession();
+		final Session session = HibernateUtil.getHibernateSession();
 		session.beginTransaction();
 
 		Transaction tx = null;
@@ -150,7 +150,7 @@ public class HibernateConnector {
 
 	public UniqueIdContainer getUniqueIds() {
 
-		Session session = HibernateUtil.getHibernateSession();
+		final Session session = HibernateUtil.getHibernateSession();
 		session.beginTransaction();
 
 		Transaction tx = null;
@@ -183,7 +183,7 @@ public class HibernateConnector {
 
 	public TestNamesContainer getTestNames(UniqueIdContainer uniqueIdContainer) {
 
-		Session session = HibernateUtil.getHibernateSession();
+		final Session session = HibernateUtil.getHibernateSession();
 		session.beginTransaction();
 
 		Transaction tx = null;
@@ -195,12 +195,12 @@ public class HibernateConnector {
 
 		List<Test> tests = session.createQuery("from Test").list();
 
-		String[] names = new String[uniqueIdContainer.getUniqueIds().length];
-		
+		ArrayList<String> names = new ArrayList<String>();
+
 		for (int a = 0; a < tests.size(); a++) {
 			for (int b = 0; b < uniqueIdContainer.getUniqueIds().length; b++) {
-				if (tests.get(a).getUniqueId() == uniqueIdContainer.getUniqueIds()[b])
-					names[a] = tests.get(a).getName();
+				if (tests.get(a).getUniqueId() != uniqueIdContainer.getUniqueIds()[b])
+					names.add(tests.get(a).getName());
 			}
 		}
 
@@ -208,7 +208,13 @@ public class HibernateConnector {
 		session.close();
 
 		TestNamesContainer container = new TestNamesContainer();
-		container.setNames(names);
+
+		String[] namesInArray = new String[names.size()];
+
+		for (int a = 0; a < names.size(); a++) {
+			namesInArray[a] = names.get(a);
+		}
+		container.setNames(namesInArray);
 
 		for (int a = 0; a < container.getNames().length; a++) {
 			if (container.getNames()[a] == null) {
