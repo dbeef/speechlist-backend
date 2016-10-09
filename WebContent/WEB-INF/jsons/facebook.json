@@ -1,0 +1,21 @@
+{
+  "sentences": "Facebook is a <<||>> corporation and online social media and social networking service based in Menlo Park, California, United States. The Facebook website was <<||>> on February 4, 2004, by Mark Zuckerberg, <<||>> with fellow Harvard College students and roommates, Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes. The founders had initially <<||>> the website's membership to Harvard students; however, later they <<||>> it to higher education institutions in the Boston area, the Ivy League schools, and Stanford University. Facebook gradually added support for students at various other universities, and <<||>> to high school students as well. Since 2006, anyone age 13 and older has been <<||>> to become a registered user of Facebook, though variations exist in the minimum age requirement, <<||>> on applicable local laws. The Facebook name comes from the face book <<||>> often given to United States university students. Facebook has <<||>> the social life and activity of people in various ways. Facebook allows people using computers or mobile phones to continuously <<||>> with friends, relatives and other <<||>> wherever they are in the world, as long as there is access to the Internet. Via wikipedia.org",
+  "vocabulary": [
+    "for-profit",
+    "launched",
+    "along",
+    "limited",
+    "expanded",
+    "eventually",
+    "allowed",
+    "depending",
+    "directories",
+    "affected",
+    "stay in touch",
+    "acquaintances"
+  ],
+  "name": "Facebook",
+  "id": 56,
+  "uniqueId": 56,
+  "category": "vocabulary"
+}

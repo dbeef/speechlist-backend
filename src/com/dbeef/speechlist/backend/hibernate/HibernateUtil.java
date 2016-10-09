@@ -1,4 +1,3 @@
-
 package com.dbeef.speechlist.backend.hibernate;
 
 import org.hibernate.Session;
@@ -32,10 +31,12 @@ public class HibernateUtil {
 
 	public static Session getHibernateSession() {
 
-		final SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+		if (sessionFactory == null) {
+			sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+		}
 
 		// factory = new Configuration().configure().buildSessionFactory();
-		final Session session = sf.openSession();
+		final Session session = sessionFactory.openSession();
 		return session;
 	}
 }

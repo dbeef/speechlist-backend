@@ -1,0 +1,24 @@
+{
+  "sentences": "Lego (stylized LEGO) is a line of plastic <<||>> toys that are manufactured by The Lego Group, a <<||>> company based in Billund, Denmark. The company's <<||>> product, Lego, consists of colourful <<||>> plastic bricks accompanying an array of gears, <<||>> called minifigures, and various other parts. Lego pieces can be <<||>> and connected in many ways, to construct objects; vehicles, buildings, and working robots. Anything constructed can then be <<||>> again, and the pieces used to make other objects. The Lego Group began manufacturing the interlocking toy bricks in 1949. <<||>> a global Lego subculture has developed. Supporting movies, games, competitions, and six <<||>> amusement parks have been developed <<||>>. As of July 2015, 600 billion Lego parts had been produced. In February 2015, Lego replaced Ferrari as Brand Finance's worlds most powerful brand. In December 2012, the BBC's More or Less radio program asked the Open University's engineering department to <<||>> 'how many Lego bricks, stacked one on <<||>>, it would take for the weight to destroy the bottom brick?' Using a hydraulic testing machine, the engineering department determined the average <<||>> a 2×2 Lego brick can stand is 4,240 newtons; since an average 2×2 Lego brick has a mass of 1.152 grams, according to their <<||>> it would take a stack of 375,000 bricks to cause the bottom brick to <<||>>, which represents a stack 3,591 metres in height. Via wikipedia.org",
+  "vocabulary": [
+    "construction",
+    "privately held",
+    "flagship",
+    "interlocking",
+    "figurines",
+    "assembled",
+    "taken apart",
+    "Since then",
+    "Legoland",
+    "under the brand",
+    "determine",
+    "top of the other",
+    "maximum force",
+    "calculations",
+    "collapse"
+  ],
+  "name": "Lego",
+  "id": 59,
+  "uniqueId": 59,
+  "category": "vocabulary"
+}

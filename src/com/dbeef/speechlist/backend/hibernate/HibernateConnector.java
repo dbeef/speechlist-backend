@@ -195,12 +195,12 @@ public class HibernateConnector {
 
 		List<Test> tests = session.createQuery("from Test").list();
 
-		ArrayList<String> names = new ArrayList<String>();
+		String[] names = new String[uniqueIdContainer.getUniqueIds().length];
 
-		for (int a = 0; a < tests.size(); a++) {
-			for (int b = 0; b < uniqueIdContainer.getUniqueIds().length; b++) {
-				if (tests.get(a).getUniqueId() != uniqueIdContainer.getUniqueIds()[b])
-					names.add(tests.get(a).getName());
+		for (int a = 0; a < names.length; a++) {
+			for (int b = 0; b < tests.size(); b++) {
+				if (tests.get(b).getUniqueId() == uniqueIdContainer.getUniqueIds()[a])
+					names[a] = tests.get(b).getName();
 			}
 		}
 
@@ -209,12 +209,7 @@ public class HibernateConnector {
 
 		TestNamesContainer container = new TestNamesContainer();
 
-		String[] namesInArray = new String[names.size()];
-
-		for (int a = 0; a < names.size(); a++) {
-			namesInArray[a] = names.get(a);
-		}
-		container.setNames(namesInArray);
+		container.setNames(names);
 
 		for (int a = 0; a < container.getNames().length; a++) {
 			if (container.getNames()[a] == null) {

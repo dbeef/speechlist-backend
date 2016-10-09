@@ -1,0 +1,26 @@
+{
+  "sentences": "Formula One (also Formula 1 or F1) is the highest class of <<||>> auto racing that is <<||>> by the Federation Internationale de l'Automobile. The FIA Formula One World Championship has been the <<||>> form of racing since the inaugural season in 1950, although other Formula One races were regularly held until 1983. The 'formula', designated in the name, refers to a <<||>>, to which all participants' cars must <<||>>. The F1 season consists of a series of races, known as Grands Prix (from French, meaning <<||>>), held worldwide on purpose-built F1 circuits and public roads. The results of each <<||>> are evaluated using a points system to determine two annual World Championships, one for <<||>>, one for constructors. The racing drivers are <<||>> to be holders of valid Super Licences, the highest class of racing licence <<||>> by the FIA. The races are required to be held on <<||>> graded 1 (formerly A), the highest grade a track can receive by the FIA. Most events are held in <<||>> locations on purpose-built tracks, but there are several events in city centres throughout the world, with the Monaco Grand Prix being the most obvious and <<||>> example. Formula One cars are the fastest <<||>> racing cars in the world, owing to very high <<||>> achieved through the generation of large amounts of aerodynamic downforce. Formula One cars race at speeds of up to approximately 380 km/h (240 mph) with engines currently limited in performance to a maximum of 15,000 RPM. The cars are <<||>> of lateral acceleration in excess of five g in corners. Via wikipedia.org",
+  "vocabulary": [
+    "single-seat",
+    "sanctioned",
+    "premier",
+    "set of rules",
+    "conform",
+    "grand prizes",
+    "race",
+    "drivers",
+    "required",
+    "issued",
+    "tracks",
+    "rural",
+    "famous",
+    "road course",
+    "cornering speeds",
+    "approximately",
+    "capable"
+  ],
+  "name": "Formula One",
+  "id": 58,
+  "uniqueId": 58,
+  "category": "vocabulary"
+}
