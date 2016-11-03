@@ -1,0 +1,19 @@
+{
+  "sentences": "The March on Washington for Jobs and Freedom was one of the largest political <<||>> for human rights in United States history and <<||>> civil and economic rights for African Americans. It took place in Washington, D.C. Thousands of Americans <<||>> to Washington on Tuesday August 27, 1963. On Wednesday, August 28, 1963, Martin Luther King, Jr., standing in front of the Lincoln Memorial, delivered his historic 'I Have a Dream' speech in which <<||>> for an end to racism. The march was organized by A. Philip Randolph and Bayard Rustin, who built an <<||>> of civil rights, labor, and religious organizations that came together <<||>> of 'jobs and freedom'. Estimates of the number of <<||>> varied from 200,000 to 300,000; the most widely cited estimate is 250,000 people. Observers <<||>> that 75–80% of the marchers were black. The march is credited with helping <<||>> the Civil Rights Act of 1964 and preceded the Selma Voting Rights Movement which <<||>> the passage of the Voting Rights Act of 1965. Via Wikipedia.org.",
+  "vocabulary": [
+    "rallies",
+    "demanded",
+    "headed",
+    "he called",
+    "alliance",
+    "under the banner",
+    "participants",
+    "estimated",
+    "to pass",
+    "led to"
+  ],
+  "name": "March on Washington",
+  "id": 66,
+  "uniqueId": 66,
+  "category": "vocabulary"
+}

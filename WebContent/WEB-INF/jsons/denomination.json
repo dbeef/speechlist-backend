@@ -1,0 +1,19 @@
+{
+  "sentences": "Denomination is a proper description of a currency amount, usually for coins or banknotes. Denominations may also be used with other means of payment like gift cards. For example, five euros is the <<||>> of a five euro note. A decimal currency is a currency where <<||>> between the main unit and the subunit is an integral power of 10. <<||>> currencies are now rare but had some advantages in daily life transactions. For example, 1 South German Gulden = 60 Kreuzer. 60 can be <<||>> into 2, 3, 4, 5, 6, 10, 12, 15, 20 or 30 parts that are still integers, making pricing easy. This advantage (in an age without mechanical or electronic calculators) and the lack of <<||>> accurate weighing apparatus (meaning an item might sometimes simply be divided in 2,4,6 etc.) <<||>> with tradition were the reasons why non-decimal currencies were used. In theory, two countries <<||>> use non-decimal currency: Mauritania (1 ouguiya = 5 khoums) and Madagascar (1 ariary = 5 iraimbilanja). In practice, however, <<||>> in each case is so low (less than 1/1000 of a United States dollar) that the <<||>> is not of any practical use and is rarely seen in circulation. In the case of the iraimbilanja, this is a carryover of the Madagascar's previous currency, the Malagasy franc, which had the ariary as a super unit worth 5 francs, and iraimbilanja was an alternate term for the franc. The last <<||>> countries to use non-decimal currencies in practice were the United Kingdom (until 1971), Ireland (1971), Malta (1972) and Nigeria (1973). Via Wikipedia.",
+  "vocabulary": [
+    "denomination",
+    "the ratio",
+    "Non-decimal",
+    "divided",
+    "widespread",
+    "coupled",
+    "currently",
+    "the value of the main unit",
+    "sub-unit",
+    "major"
+    ],
+  "name": "Denomination",
+  "id": 74,
+  "uniqueId": 74,
+  "category": "vocabulary"
+}

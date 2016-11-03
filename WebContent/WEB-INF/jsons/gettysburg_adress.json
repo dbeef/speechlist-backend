@@ -1,0 +1,20 @@
+{
+  "sentences": "The Gettysburg Address is a speech by U.S. President Abraham Lincoln, one of the <<||>> in American history. It was <<||>> by Lincoln during the American Civil War, <<||>> of Thursday, November 19, 1863, at the dedication of the Soldiers' National Cemetery in Gettysburg, Pennsylvania, four and a half months after the Union armies <<||>> those of the Confederacy at <<||>> of Gettysburg. Abraham Lincoln's carefully crafted address, <<||>> to other presentations that day, was one of the greatest and most influential <<||>> of national purpose. In just over two minutes, Lincoln <<||>> the principles of human equality espoused by the Declaration of Independence and proclaimed the Civil War as a <<||>> for the preservation of the Union sundered by the secession crisis, with 'a new birth of freedom' that would <<||>> true equality to all of its citizens. Lincoln also redefined the Civil War as a struggle not just for the Union, but also for the <<||>> of human equality. Via Wikipedia.org.",
+  "vocabulary": [
+    "best-known",
+    "delivered",
+    "on the afternoon",
+    "defeated",
+    "the Battle",
+    "secondary",
+    "statements",
+    "reiterated",
+    "struggle",
+    "bring",
+    "principle"
+  ],
+  "name": "Gettysburg Address",
+  "id": 67,
+  "uniqueId": 67,
+  "category": "vocabulary"
+}
